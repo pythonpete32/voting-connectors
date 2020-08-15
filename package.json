@@ -1,8 +1,8 @@
 {
-  "name": "@aragonone/voting-connectors",
-  "version": "1.0.0",
+  "name": "permissioned-voting",
+  "version": "0.1.0",
   "private": true,
-  "author": "Aragon One <legal@aragon.one>",
+  "author": "Aaron Foster",
   "license": "(GPL-3.0-or-later OR AGPL-3.0-or-later)",
   "devDependencies": {
     "coveralls": "^3.0.1",

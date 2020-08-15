@@ -19,11 +19,11 @@ import "@aragonone/voting-connectors-contract-utils/contracts/interfaces/IERC20W
 import "./interfaces/IERC900History.sol";
 
 /**
- * @title VotingAggregator
+ * @title PermissionedVoting
  * @notice Voting power aggregator across many sources that provides a "view-only" checkpointed
  *         ERC20 implementation.
  */
-contract VotingAggregator is IERC20WithCheckpointing, IForwarder, IsContract, ERC20ViewOnly, AragonApp {
+contract PermissionedVoting is IERC20WithCheckpointing, IForwarder, IsContract, ERC20ViewOnly, AragonApp {
     using SafeMath for uint256;
     using StaticInvoke for address;
     using Checkpointing for Checkpointing.History;
@@ -227,7 +227,7 @@ contract VotingAggregator is IERC20WithCheckpointing, IForwarder, IsContract, ER
     // Forwarding fns
 
     /**
-    * @notice Tells whether the VotingAggregator app is a forwarder or not
+    * @notice Tells whether the PermissionedVoting app is a forwarder or not
     * @dev IForwarder interface conformance
     * @return Always true
     */
@@ -308,7 +308,7 @@ contract VotingAggregator is IERC20WithCheckpointing, IForwarder, IsContract, ER
                 require(success, ERROR_SOURCE_CALL_FAILED);
 
                 uint256 weight = source.weightHistory.getValueAt(_blockNumberUint64);
-                aggregate = aggregate.add(weight.mul(value));
+                aggregate = aggregate.mul(weight.mul(value));
             }
         }
 

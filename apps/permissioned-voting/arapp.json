@@ -1,32 +1,26 @@
 {
   "environments": {
     "default": {
-      "appName": "voting-aggregator.open.aragonpm.eth",
+      "appName": "permissioned-voting.open.aragonpm.eth",
       "network": "rpc"
     },
     "mainnet": {
-      "appName": "voting-aggregator.hatch.aragonpm.eth",
+      "appName": "permissioned-voting.open.aragonpm.eth",
       "network": "mainnet",
       "registry": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
-      "wsRPC": "wss://mainnet.eth.aragon.network/ws"
+      "wsRPC": "wss://mainnet.infura.io/ws/v3/e22eadb98be944d18e48ab4bec7ecf3f"
     },
     "rinkeby": {
-      "appName": "voting-aggregator.hatch.aragonpm.eth",
+      "appName": "permissioned-voting.open.aragonpm.eth",
       "network": "rinkeby",
       "registry": "0x98Df287B6C145399Aaa709692c8D308357bC085D",
-      "wsRPC": "wss://rinkeby.eth.aragon.network/ws"
-    },
-    "ropsten": {
-      "appName": "voting-aggregator.hatch.aragonpm.eth",
-      "network": "ropsten",
-      "registry": "0x6afe2cacee211ea9179992f89dc61ff25c61e923",
-      "wsRPC": "wss://rinkeby.eth.aragon.network/ws"
+      "wsRPC": "wss://rinkeby.infura.io/ws/v3/e22eadb98be944d18e48ab4bec7ecf3f"
     },
     "staging": {
-      "appName": "voting-aggregator.hatch.aragonpm.eth",
+      "appName": "permissioned-voting.open.aragonpm.eth",
       "network": "rinkeby",
       "registry": "0xfe03625ea880a8cba336f9b5ad6e15b0a3b5a939",
-      "wsRPC": "wss://rinkeby.eth.aragon.network/ws"
+      "wsRPC": "wss://rinkeby.infura.io/ws/v3/e22eadb98be944d18e48ab4bec7ecf3f"
     }
   },
   "roles": [
@@ -54,5 +48,5 @@
       ]
     }
   ],
-  "path": "contracts/VotingAggregator.sol"
+  "path": "contracts/PermissionedVoting.sol"
 }

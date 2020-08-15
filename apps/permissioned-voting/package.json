@@ -1,8 +1,8 @@
 {
-  "name": "@aragonone/apps-voting-aggregator",
+  "name": "permissioned-voting",
   "version": "1.0.1",
   "description": "Aragon voting aggregator app",
-  "author": "Aragon One <legal@aragon.one>",
+  "author": "Aaron Foster",
   "license": "(GPL-3.0-or-later OR AGPL-3.0-or-later)",
   "files": [
     "/abi",
@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "apm:prepublish": "npm run compile",
-    "apm:publish": "node scripts/publish",
+    "apm:publish:rinkeby": "node scripts/publish --env rinkeby",
+    "apm:publish:mainnet": "node scripts/publish --env mainnet",
     "compile": "truffle compile",
     "build": "",
     "lint": "solium --dir ./contracts",
